@@ -1,0 +1,19 @@
+<h2>Últimos Posts</h2>
+
+<section class="post-feed">
+  {{#if posts.length}}
+    {{#each posts}}
+      <article class="post-card">
+        <a href="/posts/{{this._id}}" class="post-link">
+          <p>{{this.content}}</p>
+        </a>
+        <small>Postado por:
+          <strong>{{this.author.username}}</strong>
+          em
+          {{this.created_at}}</small>
+      </article>
+    {{/each}}
+  {{else}}
+    <p>Ainda não há posts por aqui. Seja o primeiro a criar um!</p>
+  {{/if}}
+</section>

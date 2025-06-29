@@ -1,0 +1,33 @@
+<h2>Dashboard de {{user.username}}</h2>
+<p>Bem-vindo à sua área pessoal! Aqui estão os seus posts:</p>
+
+<a href="/posts/new" class="btn">Criar Novo Post</a>
+
+<hr />
+
+<div class="post-list">
+  {{#if posts.length}}
+    {{#each posts}}
+      <div class="user-post-card">
+        <a href="/posts/{{this._id}}" class="post-link">
+          <p>{{this.content}}</p>
+        </a>
+        <small>Postado em: {{this.created_at}}</small>
+        <div class="post-actions">
+          <a href="/posts/edit/{{this._id}}" class="btn-edit">Editar</a>
+
+          <form
+            action="/api/posts/{{this._id}}?_method=DELETE"
+            method="POST"
+            style="display: inline;"
+          >
+            <button type="submit" class="btn-delete">Deletar</button>
+          </form>
+        </div>
+      </div>
+    {{/each}}
+  {{else}}
+    <p>Você ainda não criou nenhum post.
+      <a href="/posts/new">Que tal criar o primeiro?</a></p>
+  {{/if}}
+</div>

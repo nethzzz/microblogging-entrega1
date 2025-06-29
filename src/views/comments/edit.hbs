@@ -1,0 +1,10 @@
+<h2>Editar Comentário</h2>
+<form action="/api/comments/{{comment._id}}?_method=PATCH" method="POST" class="user-form">
+    <input type="hidden" name="post_id" value="{{comment.post_id}}">
+    <div class="form-group">
+        <label for="comment">Seu Comentário:</label>
+        <textarea id="comment" name="comment" rows="4" required>{{comment.comment}}</textarea>
+    </div>
+    <button type="submit" class="btn">Salvar Alterações</button>
+</form>
+

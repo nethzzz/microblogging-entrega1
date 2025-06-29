@@ -1,0 +1,8 @@
+<h2>Editar Post</h2>
+<form action="/api/posts/{{post._id}}?_method=PATCH" method="POST" class="user-form">
+    <div class="form-group">
+        <label for="content">Conteúdo:</label>
+        <textarea id="content" name="content" rows="5" required>{{post.content}}</textarea>
+    </div>
+    <button type="submit" class="btn">Salvar Alterações</button>
+</form>

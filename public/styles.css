@@ -1,0 +1,184 @@
+/* ===== 1. IMPORTAÇÃO DE FONTES E VARIÁVEIS GLOBAIS ===== */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+:root {
+    --primary-color: #007bff;
+    --primary-hover-color: #0056b3;
+    --danger-color: #dc3545;
+    --danger-hover-color: #c82333;
+    --light-gray-color: #f8f9fa;
+    --medium-gray-color: #e9ecef;
+    --dark-gray-color: #343a40;
+    --text-color: #212529;
+    --white-color: #ffffff;
+    --border-radius: 5px;
+    --box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* ===== 2. RESET BÁSICO E ESTILOS GLOBAIS ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: var(--light-gray-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ===== 3. LAYOUT PRINCIPAL (HEADER, MAIN, FOOTER) ===== */
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: var(--white-color);
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--medium-gray-color);
+    box-shadow: var(--box-shadow);
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.5rem;
+}
+
+header nav a {
+    margin-left: 15px;
+    font-weight: 700;
+}
+
+main {
+    padding: 2rem 0;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+    color: #6c757d;
+    border-top: 1px solid var(--medium-gray-color);
+}
+
+/* ===== 4. ESTILOS DE FORMULÁRIOS ===== */
+.user-form {
+    max-width: 500px;
+    margin: 1rem auto;
+    padding: 2rem;
+    background: var(--white-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ced4da;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+}
+
+/* ===== 5. ESTILOS DE BOTÕES ===== */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.btn:hover {
+    background-color: var(--primary-hover-color);
+    text-decoration: none;
+}
+
+.btn-delete, .btn-delete-comment {
+    background-color: var(--danger-color);
+}
+
+.btn-delete:hover, .btn-delete-comment:hover {
+    background-color: var(--danger-hover-color);
+}
+
+.btn-edit, .btn-edit-comment {
+    background-color: #6c757d;
+}
+.btn-edit:hover, .btn-edit-comment:hover {
+    background-color: #5a6268;
+}
+
+/* ===== 6. CARDS DE POSTS E COMENTÁRIOS ===== */
+.post-card, .user-post-card, .main-post, .comment {
+    background: var(--white-color);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.post-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.post-link p {
+    font-size: 1.1rem;
+}
+
+.post-card small, .user-post-card small, .main-post small, .comment small {
+    color: #6c757d;
+    display: block;
+    margin-top: 1rem;
+}
+
+.post-actions {
+    margin-top: 1rem;
+    border-top: 1px solid var(--medium-gray-color);
+    padding-top: 1rem;
+}
+
+.post-actions a, .post-actions button {
+    margin-right: 10px;
+}
+
+.comment-form {
+    margin-bottom: 2rem;
+}

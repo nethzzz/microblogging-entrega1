@@ -1,0 +1,44 @@
+<div class="single-post-container">
+    <article class="main-post">
+        <h2>Conteúdo do Post</h2>
+        <p>{{post.content}}</p>
+        <small>Postado em {{post.created_at}}</small>
+    </article>
+
+    <hr>
+
+    <section class="comment-section">
+        <h3>Comentários</h3>
+
+        {{#if user}}
+            <form action="/api/comments" method="POST" class="comment-form">
+                <input type="hidden" name="post_id" value="{{post._id}}">
+                <textarea name="comment" placeholder="Escreva seu comentário..." required></textarea>
+                <button type="submit" class="btn">Comentar</button>
+            </form>
+        {{else}}
+            <p><a href="/login">Faça login</a> para deixar um comentário.</p>
+        {{/if}}
+
+        <div class="comment-list">
+    {{#if comments.length}}
+        {{#each comments}}
+            <div class="comment">
+                <p>{{this.comment}}</p>
+                <small>Por: <strong>{{this.author.username}}</strong> em {{this.created_at}}</small>
+
+                {{#if_eq ../user.id this.author._id}}
+                    <div class="comment-actions">
+                        <a href="/comments/edit/{{this._id}}" class="btn-edit-comment">Editar</a>
+                        <form action="/api/comments/{{this._id}}?_method=DELETE" method="POST" style="display: inline;">
+                            <button type="submit" class="btn-delete-comment">Deletar</button>
+                        </form>
+                    </div>
+                {{/if_eq}}
+            </div>
+        {{/each}}
+            {{else}}
+        {{/if}}
+        </div>
+    </section>
+</div>

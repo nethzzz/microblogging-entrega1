@@ -1,0 +1,103 @@
+[2025-06-28T18:51:19.018Z] Error: Campos obrigatórios ausentes: user_id, content
+    at validateFields (C:\Users\natha\Área de Trabalho\microblogging-backend\src\utils\validator.js:4:13)
+    at Post.createPost (C:\Users\natha\Área de Trabalho\microblogging-backend\src\models\Post.js:11:7)
+    at C:\Users\natha\Área de Trabalho\microblogging-backend\src\routes\postRoutes.js:11:36
+    at Layer.handleRequest (C:\Users\natha\Área de Trabalho\microblogging-backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\natha\Área de Trabalho\microblogging-backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\natha\Área de Trabalho\microblogging-backend\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\natha\Área de Trabalho\microblogging-backend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\natha\Área de Trabalho\microblogging-backend\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\natha\Área de Trabalho\microblogging-backend\node_modules\router\index.js:295:15
+    at processParams (C:\Users\natha\Área de Trabalho\microblogging-backend\node_modules\router\index.js:582:12)
+[2025-06-28T18:52:01.908Z] Error: Campos obrigatórios ausentes: user_id, content
+    at validateFields (C:\Users\natha\Área de Trabalho\microblogging-backend\src\utils\validator.js:4:13)
+    at Post.createPost (C:\Users\natha\Área de Trabalho\microblogging-backend\src\models\Post.js:11:7)
+    at C:\Users\natha\Área de Trabalho\microblogging-backend\src\routes\postRoutes.js:11:36
+    at Layer.handleRequest (C:\Users\natha\Área de Trabalho\microblogging-backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\natha\Área de Trabalho\microblogging-backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\natha\Área de Trabalho\microblogging-backend\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\natha\Área de Trabalho\microblogging-backend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\natha\Área de Trabalho\microblogging-backend\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\natha\Área de Trabalho\microblogging-backend\node_modules\router\index.js:295:15
+    at processParams (C:\Users\natha\Área de Trabalho\microblogging-backend\node_modules\router\index.js:582:12)
+[2025-06-28T18:54:55.636Z] Error: Campos obrigatórios ausentes: user_id, content
+    at validateFields (C:\Users\natha\Área de Trabalho\microblogging-backend\src\utils\validator.js:4:13)
+    at Post.createPost (C:\Users\natha\Área de Trabalho\microblogging-backend\src\models\Post.js:11:7)
+    at C:\Users\natha\Área de Trabalho\microblogging-backend\src\routes\postRoutes.js:11:36
+    at Layer.handleRequest (C:\Users\natha\Área de Trabalho\microblogging-backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\natha\Área de Trabalho\microblogging-backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\natha\Área de Trabalho\microblogging-backend\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\natha\Área de Trabalho\microblogging-backend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\natha\Área de Trabalho\microblogging-backend\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\natha\Área de Trabalho\microblogging-backend\node_modules\router\index.js:295:15
+    at processParams (C:\Users\natha\Área de Trabalho\microblogging-backend\node_modules\router\index.js:582:12)
+[2025-06-28T18:56:19.464Z] Error: Campos obrigatórios ausentes: user_id, content
+    at validateFields (C:\Users\natha\Área de Trabalho\microblogging-backend\src\utils\validator.js:4:13)
+    at Post.createPost (C:\Users\natha\Área de Trabalho\microblogging-backend\src\models\Post.js:11:7)
+    at C:\Users\natha\Área de Trabalho\microblogging-backend\src\routes\postRoutes.js:12:36
+    at Layer.handleRequest (C:\Users\natha\Área de Trabalho\microblogging-backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\natha\Área de Trabalho\microblogging-backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\natha\Área de Trabalho\microblogging-backend\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\natha\Área de Trabalho\microblogging-backend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\natha\Área de Trabalho\microblogging-backend\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\natha\Área de Trabalho\microblogging-backend\node_modules\router\index.js:295:15
+    at processParams (C:\Users\natha\Área de Trabalho\microblogging-backend\node_modules\router\index.js:582:12)
+[2025-06-28T19:01:08.122Z] Error: Campos obrigatórios ausentes: user_id, content
+    at validateFields (C:\Users\natha\Área de Trabalho\microblogging-backend\src\utils\validator.js:4:13)
+    at Post.createPost (C:\Users\natha\Área de Trabalho\microblogging-backend\src\models\Post.js:12:7)
+    at C:\Users\natha\Área de Trabalho\microblogging-backend\src\routes\postRoutes.js:11:36
+    at Layer.handleRequest (C:\Users\natha\Área de Trabalho\microblogging-backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\natha\Área de Trabalho\microblogging-backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\natha\Área de Trabalho\microblogging-backend\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\natha\Área de Trabalho\microblogging-backend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\natha\Área de Trabalho\microblogging-backend\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\natha\Área de Trabalho\microblogging-backend\node_modules\router\index.js:295:15
+    at processParams (C:\Users\natha\Área de Trabalho\microblogging-backend\node_modules\router\index.js:582:12)
+[2025-06-28T19:02:42.258Z] Error: Campos obrigatórios ausentes: user_id, content
+    at validateFields (C:\Users\natha\Área de Trabalho\microblogging-backend\src\utils\validator.js:4:13)
+    at Post.createPost (C:\Users\natha\Área de Trabalho\microblogging-backend\src\models\Post.js:12:7)
+    at C:\Users\natha\Área de Trabalho\microblogging-backend\src\routes\postRoutes.js:12:36
+    at Layer.handleRequest (C:\Users\natha\Área de Trabalho\microblogging-backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\natha\Área de Trabalho\microblogging-backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\natha\Área de Trabalho\microblogging-backend\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\natha\Área de Trabalho\microblogging-backend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\natha\Área de Trabalho\microblogging-backend\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\natha\Área de Trabalho\microblogging-backend\node_modules\router\index.js:295:15
+    at processParams (C:\Users\natha\Área de Trabalho\microblogging-backend\node_modules\router\index.js:582:12)
+[2025-06-28T20:39:40.637Z] Error: Campos obrigatórios ausentes: user_id
+    at validateFields (C:\Users\natha\Área de Trabalho\microblogging-backend\src\utils\validator.js:4:13)
+    at Comment.createComment (C:\Users\natha\Área de Trabalho\microblogging-backend\src\models\Comment.js:11:7)
+    at C:\Users\natha\Área de Trabalho\microblogging-backend\src\routes\commentRoutes.js:20:38
+    at Layer.handleRequest (C:\Users\natha\Área de Trabalho\microblogging-backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\natha\Área de Trabalho\microblogging-backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\natha\Área de Trabalho\microblogging-backend\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\natha\Área de Trabalho\microblogging-backend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\natha\Área de Trabalho\microblogging-backend\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\natha\Área de Trabalho\microblogging-backend\node_modules\router\index.js:295:15
+    at processParams (C:\Users\natha\Área de Trabalho\microblogging-backend\node_modules\router\index.js:582:12)
+[2025-06-28T20:40:15.074Z] Error: Campos obrigatórios ausentes: user_id
+    at validateFields (C:\Users\natha\Área de Trabalho\microblogging-backend\src\utils\validator.js:4:13)
+    at Comment.createComment (C:\Users\natha\Área de Trabalho\microblogging-backend\src\models\Comment.js:11:7)
+    at C:\Users\natha\Área de Trabalho\microblogging-backend\src\routes\commentRoutes.js:20:38
+    at Layer.handleRequest (C:\Users\natha\Área de Trabalho\microblogging-backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\natha\Área de Trabalho\microblogging-backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\natha\Área de Trabalho\microblogging-backend\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\natha\Área de Trabalho\microblogging-backend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\natha\Área de Trabalho\microblogging-backend\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\natha\Área de Trabalho\microblogging-backend\node_modules\router\index.js:295:15
+    at processParams (C:\Users\natha\Área de Trabalho\microblogging-backend\node_modules\router\index.js:582:12)
+2025-06-28T22:13:44.232Z - ERROR: [Post.findAllPosts] mongoClient is not defined
+2025-06-28T22:21:34.059Z - ERROR: Campos obrigatórios ausentes: content
+2025-06-28T23:03:06.814Z - ERROR: Cannot read properties of undefined (reading 'id')
+2025-06-28T23:03:23.350Z - ERROR: Cannot read properties of undefined (reading 'id')
+2025-06-29T19:46:00.957Z - ERROR: Cannot read properties of undefined (reading 'id')
+2025-06-29T19:46:23.710Z - ERROR: Cannot read properties of undefined (reading 'id')
+2025-06-29T19:46:53.101Z - ERROR: Cannot read properties of undefined (reading 'id')
+2025-06-29T19:47:49.564Z - ERROR: Cannot read properties of undefined (reading 'id')
+2025-06-29T19:50:51.116Z - ERROR: Cannot read properties of undefined (reading 'id')
+2025-06-29T19:59:00.483Z - ERROR: Cannot read properties of undefined (reading 'id')
+2025-06-29T19:59:08.528Z - ERROR: Cannot read properties of undefined (reading 'id')
+2025-06-29T20:10:02.941Z - ERROR: Cannot read properties of undefined (reading 'id')
+2025-06-29T20:10:47.581Z - ERROR: Cannot read properties of undefined (reading 'id')
+2025-06-29T20:10:55.245Z - ERROR: Cannot read properties of undefined (reading 'id')
+2025-06-29T20:28:32.389Z - ERROR: [Comment.findCommentsByPost] mongoClient is not defined
