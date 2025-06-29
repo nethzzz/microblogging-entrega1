@@ -1,9 +1,9 @@
 # Trabalho Acadêmico
 
-Disciplina: EC48B - Programação Web Back-End - C81 (2025_01)
-Alunos: Maria Julia Leal e Nathan Zavam
-Tema: Microblogging
-Entrega 1: Node.js e MongoDB
+- Disciplina: EC48B - Programação Web Back-End - C81 (2025_01)
+- Alunos: Maria Julia Leal e Nathan Zavam
+- Tema: Microblogging
+- Entrega 1: Node.js e MongoDB
 
 # Instruções para execução
 
