@@ -1,5 +1,3 @@
-// src/routes/userRoutes.js
-
 const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
@@ -13,7 +11,6 @@ const logger = require('../utils/logger');
  */
 router.post('/users/register', async (req, res) => {
     try {
-        // Lógica de registro existente
         const { username, email, password } = req.body;
         const existingUser = await User.findUserByEmail(email);
         if (existingUser) {
@@ -21,7 +18,6 @@ router.post('/users/register', async (req, res) => {
         }
         await User.createUser({ username, email, password });
         
-        // Em vez de retornar JSON, redireciona para a página de login
         res.redirect('/login');
 
     } catch (error) {
@@ -47,13 +43,11 @@ router.post('/users/login', async (req, res) => {
             return res.status(400).send('Credenciais inválidas.');
         }
 
-        // Em vez de criar um token, salvamos o usuário na SESSÃO
         req.session.user = {
             id: user._id,
             username: user.username
         };
         
-        // Redireciona para uma página de "área logada" que criaremos a seguir
         res.redirect('/dashboard');
 
     } catch (error) {

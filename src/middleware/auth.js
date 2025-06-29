@@ -1,5 +1,3 @@
-// src/middleware/auth.js
-
 const jwt = require('jsonwebtoken');
 const logger = require('../utils/logger');
 
@@ -12,8 +10,6 @@ function auth(req, res, next) {
     return res.status(401).json({ error: 'Acesso negado. Nenhum token fornecido.' });
   }
 
-  // O token geralmente vem no formato "Bearer <token>"
-  // Nós precisamos extrair apenas a parte do token
   const tokenPart = token.split(' ')[1];
     
   if (!tokenPart) {

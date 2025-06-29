@@ -1,4 +1,3 @@
-
 const express = require('express');
 const router = express.Router();
 const auth = require('../middleware/auth');
@@ -18,7 +17,6 @@ router.post('/comments', ensureAuth, async (req, res) => {
 
         await Comment.createComment({ post_id, user_id, comment });
         
-        // Redireciona de volta para a página do post onde o comentário foi feito
         res.redirect(`/posts/${post_id}`);
     } catch (error) {
         logger.error(error.message);
@@ -33,11 +31,9 @@ router.post('/comments', ensureAuth, async (req, res) => {
  */
 router.get('/comments/post/:postId', async (req, res) => {
   try {
-    // O ID do post vem como um parâmetro na URL
     const { postId } = req.params;
     const comments = await Comment.findCommentsByPost(postId);
 
-    // É normal um post não ter comentários, então retornamos um array vazio se for o caso
     res.status(200).json(comments);
   } catch (error) {
     logger.error(error.message);
@@ -62,7 +58,7 @@ router.delete('/comments/:id', ensureAuth, async (req, res) => {
 
         const postId = existingComment.post_id;
         await Comment.deleteComment(commentId);
-        res.redirect(`/posts/${postId}`); // Redireciona de volta para o post
+        res.redirect(`/posts/${postId}`); 
     } catch (error) {
         logger.error(error.message);
         res.status(500).send('Erro ao deletar o comentário.');
@@ -87,7 +83,7 @@ router.patch('/comments/:id', ensureAuth, async (req, res) => {
         }
 
         await Comment.updateComment(commentId, newCommentText);
-        res.redirect(`/posts/${post_id}`); // Redireciona de volta para o post
+        res.redirect(`/posts/${post_id}`); 
     } catch (error) {
         logger.error(error.message);
         res.status(500).send('Erro ao atualizar o comentário.');

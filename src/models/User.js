@@ -1,11 +1,15 @@
 const { validateFields } = require('../utils/validator');
 const logger = require('../utils/logger');
 const mongoClient = require('../database/mongoClient');
-const bcrypt = require('bcryptjs'); // Importamos o bcrypt
+const bcrypt = require('bcryptjs');
 
 class User {
   static collectionName = 'users';
 
+  /**
+     * Cria um usuario
+     * @param {string} data - username, email e senha.
+     */
   static async createUser(data) {
     try {
       validateFields(data, ['username', 'email', 'password']);
@@ -20,7 +24,7 @@ class User {
       const newUser = await db.collection('users').insertOne({
         username,
         email,
-        password: hashedPassword, // Salva a senha hasheada, não a original!
+        password: hashedPassword,
         created_at: new Date()
       });
       return newUser;
@@ -31,10 +35,14 @@ class User {
     }
   }
 
+  /**
+     * Procura um usuario pelo email
+     * @param {string} email - email do usuario
+     * @returns - user ou null
+     */
   static async findUserByEmail(email) {
     try {
       const db = await mongoClient.connect();
-      // Usamos .findOne para buscar um único documento
       const user = await db.collection('users').findOne({ email: email });
       return user;
     } catch (error) {
@@ -43,6 +51,11 @@ class User {
     }
   }
 
+  /**
+     * Procura um usuario pelo ID
+     * @param {string} id - ID do usuario
+     * @returns - user ou null
+     */
   static async findUserById(id) {
     try {
       const db = await connect();
@@ -54,6 +67,10 @@ class User {
     }
   }
 
+  /**
+     * Deletar um usuario
+     * @param {string} id - id do usuario
+     */
   static async deleteUser(id) {
     try {
       const db = await connect();

@@ -12,10 +12,9 @@ router.get('/', async (req, res) => {
     try {
         const posts = await Post.findAllPosts();
         
-        // Renderiza o template 'home.hbs' e passa a lista de posts para ele
         res.render('home', {
-            posts: posts, // Os dados que o template vai usar
-            user: req.session.user // Passa a informação do usuário logado (se houver)
+            posts: posts, 
+            user: req.session.user 
         });
     } catch (error) {
         console.error(error);
@@ -28,7 +27,7 @@ router.get('/', async (req, res) => {
  * @desc    Renderiza a página de login
  */
 router.get('/login', (req, res) => {
-    res.render('login'); // Renderiza o arquivo login.hbs
+    res.render('login'); 
 });
 
 /**
@@ -36,7 +35,7 @@ router.get('/login', (req, res) => {
  * @desc    Renderiza a página de registro
  */
 router.get('/register', (req, res) => {
-    res.render('register'); // Renderiza o arquivo register.hbs
+    res.render('register'); 
 });
 
 /**
@@ -46,10 +45,10 @@ router.get('/register', (req, res) => {
 router.get('/logout', (req, res) => {
     req.session.destroy(err => {
         if (err) {
-            return res.redirect('/dashboard'); // Se der erro, volta pra área logada
+            return res.redirect('/dashboard'); 
         }
-        res.clearCookie('connect.sid'); // Limpa o cookie da sessão
-        res.redirect('/'); // Redireciona para a home
+        res.clearCookie('connect.sid'); 
+        res.redirect('/'); 
     });
 });
 
@@ -60,17 +59,17 @@ router.get('/logout', (req, res) => {
 //                                   👇
 router.get('/dashboard', ensureAuth, async (req, res) => { // 2. Aplique o middleware
     try {
-        // Busca os posts do usuário que está na sessão
+        
         const posts = await Post.findPostsByUserId(req.session.user.id);
         
-        // Renderiza o template do dashboard, passando os posts e os dados do usuário
+       
         res.render('dashboard', {
             user: req.session.user,
             posts: posts
         });
     } catch (error) {
         console.error(error);
-        res.render('error/500'); // (Opcional) Renderiza uma página de erro
+        res.render('error/500'); 
     }
 });
 
@@ -79,7 +78,7 @@ router.get('/dashboard', ensureAuth, async (req, res) => { // 2. Aplique o middl
  * @desc    Renderiza o formulário para criar um novo post
  */
 router.get('/posts/new', ensureAuth, (req, res) => {
-    res.render('posts/add', { user: req.session.user }); // Renderiza um novo template
+    res.render('posts/add', { user: req.session.user }); 
 });
 
 /**
@@ -90,7 +89,7 @@ router.get('/posts/edit/:id', ensureAuth, async (req, res) => {
     try {
         const post = await Post.findPostById(req.params.id);
         if (post.user_id.toString() !== req.session.user.id) {
-            return res.redirect('/dashboard'); // Não é o dono, volta pro dashboard
+            return res.redirect('/dashboard'); 
         }
         res.render('posts/edit', { post: post, user: req.session.user });
     } catch (error) {
@@ -106,14 +105,13 @@ router.get('/posts/edit/:id', ensureAuth, async (req, res) => {
 router.get('/posts/:id', async (req, res) => {
     try {
         const postId = req.params.id;
-        // Busca o post e os comentários em paralelo para mais eficiência
         const [post, comments] = await Promise.all([
             Post.findPostById(postId),
             Comment.findCommentsByPost(postId)
         ]);
 
         if (!post) {
-            return res.render('error/404'); // Renderiza uma página de erro 404
+            return res.render('error/404'); 
         }
 
         res.render('posts/single', {
@@ -136,7 +134,7 @@ router.get('/comments/edit/:id', ensureAuth, async (req, res) => {
     try {
         const comment = await Comment.findCommentById(req.params.id);
         if (comment.user_id.toString() !== req.session.user.id) {
-            return res.redirect('/'); // Não é o dono, redireciona para a home
+            return res.redirect('/'); 
         }
         res.render('comments/edit', { comment: comment, user: req.session.user });
     } catch (error) {

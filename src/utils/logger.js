@@ -1,12 +1,9 @@
-// src/utils/logger.js
-
 const fs = require('fs');
 const path = require('path');
 
-// Cria um caminho absoluto para o arquivo de log, garantindo que funcione de qualquer lugar
 const logFilePath = path.join(__dirname, '..', 'logs', 'errors.log');
 
-// Função para garantir que o diretório de logs exista antes de tentar escrever nele
+
 const ensureLogDirExists = () => {
   const logDir = path.dirname(logFilePath);
   if (!fs.existsSync(logDir)) {
@@ -14,7 +11,6 @@ const ensureLogDirExists = () => {
   }
 };
 
-// Objeto que vamos exportar, contendo os métodos de log
 const logger = {
   /**
    * Grava uma mensagem de erro no arquivo de log.
@@ -22,7 +18,7 @@ const logger = {
    */
   error: (message) => {
     try {
-      ensureLogDirExists(); // Garante que a pasta /logs exista
+      ensureLogDirExists(); 
       const timestamp = new Date().toISOString();
       const logMessage = `${timestamp} - ERROR: ${message}\n`;
       fs.appendFileSync(logFilePath, logMessage, 'utf8');
@@ -47,5 +43,4 @@ const logger = {
   }
 };
 
-// Exporta o objeto logger completo
 module.exports = logger;

@@ -6,6 +6,11 @@ const mongoClient = require('../database/mongoClient');
 class Post {
   static collectionName = 'posts';
 
+  /**
+     * Cria um post
+     * @param {string} data - o conteudo do post a ser criado.
+     * @returns {Promise<object|null>} O ID do post ou null.
+     */
   static async createPost(data) {
     try {
       validateFields(data, ['user_id', 'content']);
